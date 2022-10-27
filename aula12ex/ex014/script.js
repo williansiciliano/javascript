@@ -2,10 +2,10 @@ function carregar(){ // executada ao carregar o <body> através da propriedade O
 
 var msg = window.document.getElementById('msg') // a var 'msg' receberá o conteúdo da id #msg
 var img = window.document.getElementById('imagem') // a var 'img' receberá o conteúdo da id #imagem
-var data = new Date() // a var 'data' receberá o conteúdo da da data atual (horário, dia do mês, dia da semana, fuso)
+var data = new Date() // a var 'data' receberá o conteúdo da data atual (horário, dia do mês, dia da semana, fuso)
 var hora = data.getHours() // a var 'hora' receberá as horas inteiras da var data
 
-msg.innerHTML = `<strong>Agora são ${hora}h</strong>` // irá alterar o conteúdo do elemento de id #msg 
+msg.innerHTML = `<strong>Agora são ${hora}h</strong>` // irá alterar o conteúdo do elemento de id #msg (<div id="msg">)
 
 if(hora >= 0 && hora < 12) {
 // BOM DIA

@@ -9,12 +9,12 @@ function verificar(){
     } else {
         var fsex = document.getElementsByName('radsex') // variável 'fsex' recebe a escolha de 'Masculino'([0]) ou 'Feminino'([1])
         var idade = ano - Number(fano.value)
-        var genero = '' // variável 'genero' recebendo valor nulo
+        var genero = '' // variável 'genero' recebendo valor nulo, apenas para criá-la
 
         var img = document.createElement('img') // criar uma tag <img> e atribuir seu conteúdo à variável 'img'
         img.setAttribute('id', 'foto') // a <img> criada terá um id = 'foto' 
 
-        if ( fsex[0].checked){ // [0] indica que é a primeira opção das bolinhas do sexo name ='radsex', ou seja, Masculino.
+        if ( fsex[0].checked){ // [0] indica que é a primeira opção das bolinhas do sexo de name ='radsex', ou seja, Masculino.
             genero = 'Homem'
             document.body.style.background = '#468eec'
             if (idade < 10){
@@ -30,7 +30,7 @@ function verificar(){
                 //idoso
                 img.setAttribute('src', 'fotoidoso-m.png')
             }
-        } else if (fsex[1].checked){ // [1] indica que é a segunda opção das bolinhas do sexo name = 'radsex', ou seja, Feminino.
+        } else if (fsex[1].checked){ // [1] indica que é a segunda opção das bolinhas do sexo de name = 'radsex', ou seja, Feminino.
             genero = 'Mulher'
             document.body.style.background = '#da4ed3'
             if (idade < 10){
@@ -49,7 +49,7 @@ function verificar(){
         }
 
         res.style.textAlign = 'center'
-        res.innerHTML = `Detectamos ${genero} com ${idade} anos.`
-        res.appendChild(img)
+        res.innerHTML = `Detectamos <strong>${genero}</strong> com <strong>${idade} anos</strong>.`
+        res.appendChild(img) // insere o elemento child, entre parênteses, dessa variável (no caso a <img>)
     }
 }
