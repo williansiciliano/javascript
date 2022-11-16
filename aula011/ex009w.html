@@ -13,7 +13,7 @@
 </head>
 <body>
     <h1>Nacionalidade</h1>
-    Informe sua nacionalidade: <input type="text" name="txtpais" id="txtpais">
+    Informe o país onde nasceu: <input type="text" name="txtpais" id="txtpais">
     <input type="button" value="Verificar" onclick="verif()">
     <div id="res">Você é: </div>
 
@@ -22,10 +22,10 @@
             var pais = window.document.getElementById('txtpais').value // colocar o '.value' resolveu!
             var res = window.document.querySelector('div#res')
             console.log(pais)
-            if(pais == 'Brasil') {
-                res.innerHTML += 'brasileiro'
+            if(pais == 'Brasil' || 'brasil') {
+                res.innerHTML = 'Você é: brasileiro'
             } else {
-                res.innerHTML += 'estrangeiro'
+                res.innerHTML = 'Você é: estrangeiro'
             }
         }
     </script>

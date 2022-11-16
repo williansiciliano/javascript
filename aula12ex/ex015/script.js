@@ -1,3 +1,8 @@
+/* var buttonVerif = document.getElementById('verif')
+buttonVerif.addEventListener('click', verificar) */
+
+// Poderíamos colocar da forma acima ao invés de 'onclick="verificar()" 
+
 function verificar(){
     var data = new Date()
     var ano = data.getFullYear()
@@ -50,6 +55,6 @@ function verificar(){
 
         res.style.textAlign = 'center'
         res.innerHTML = `Detectamos <strong>${genero}</strong> com <strong>${idade} anos</strong>.`
-        res.appendChild(img) // insere o elemento child, entre parênteses, dessa variável (no caso a <img>)
+        res.appendChild(img) // insere o elemento child (no caso, "img") da variável "res"...inserindo logo abaixo do elemento "parent"
     }
 }
