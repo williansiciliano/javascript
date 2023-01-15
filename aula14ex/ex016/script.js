@@ -23,7 +23,7 @@ function contar(){
             for(let c = i; c <= f; c += p){
                 res.innerHTML += ` ${c} \u{1F449}`
             }
-        } else { // ou seja, if ( i < f )
+        } else { // ou seja, if ( i > f )
             // Contagem Regressiva
             for(let c = i; c >= f; c -= p){
                 res.innerHTML += ` ${c} \u{1F449}`

@@ -54,7 +54,6 @@ function finalizar (){
 
         media = soma/total // total = valores.length
 
-
         res.innerHTML = `` // vamos zerar o valor
         res.innerHTML += `<p>Ao todo temos ${total} números cadastrados.</p>`
         res.innerHTML += `<p>O maior valor informado foi ${maior}.</p>`
